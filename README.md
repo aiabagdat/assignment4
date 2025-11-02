@@ -13,17 +13,15 @@ This project implements:
 
 ---
 
-## 📂 Project Structure
-
-
+Project Structure
 assignment4/
 ├── src/main/java/
-│ ├── common/ # Graph model + metrics + Main
-│ ├── graph/scc/ # Tarjan SCC
-│ ├── graph/topo/ # Topological Sort
-│ └── graph/dagsp/ # DAG Shortest & Longest Path
-├── data/ # Input graph test cases
-└── scripts/ # Dataset generator
+│   ├── common/           # Graph model + metrics + Main
+│   ├── graph/scc/        # Tarjan SCC
+│   ├── graph/topo/       # Topological Sort
+│   └── graph/dagsp/      # DAG Shortest & Longest Path
+├── data/                 # Input graph test cases
+└── scripts/              # Dataset generator
 
 
 ---
@@ -113,6 +111,7 @@ Time Complexity Summary
 | **Total**         | **O(V + E)** |
 
 Conclusion
+
 SCC detection: Successfully implemented Tarjan's algorithm.
 Condensation: Valid DAG constructed from SCCs.
 Topological Sort: Correctly sorted the DAG.
