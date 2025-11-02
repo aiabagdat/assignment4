@@ -23,16 +23,43 @@ assignment4/
 ├── data/ # Input graph test cases
 └── scripts/ # Dataset generator
 
----
+## ⚙️ How to Run
 
-##  How to Run
+### Run tests and experiment with any dataset
+To run the tests on any dataset, use the following Maven command:
 
-### Run on any dataset
 ```bash
 mvn exec:java -Dexec.mainClass="common.Main" -Dexec.args="data/<file>.json"
-Example:
-mvn exec:java -Dexec.mainClass="common.Main" -Dexec.args="data/tasks.json"
+
+Running Tests
+To run the JUnit tests, use:
+mvn test
+
+
  Experimental Results
+ 
+## 🧪 JUnit Tests
+
+This project includes unit tests for the graph algorithms. The following tests have been implemented:
+
+1️⃣ **Graph Basics**: Tests basic graph operations (e.g., adding edges, directed graph).
+2️⃣ **Tarjan’s SCC Algorithm**: Tests the detection of strongly connected components.
+3️⃣ **Topological Sorting**: Tests the topological ordering of a directed acyclic graph (DAG).
+4️⃣ **Shortest Path in DAG**: Tests the shortest path calculation in a DAG.
+5️⃣ **Longest Path (Critical Path)**: Tests the calculation of the longest path (critical path) in a DAG.
+
+All tests have been executed successfully with no errors or failures. See the full test results below.
+
+### 🧪 Test Results:
+| Test Class                | Tests Run | Failures | Errors | Time Taken |
+| ------------------------- | --------- | -------- | ------ | ---------- |
+| `GraphBasicsTest`          | 1         | 0        | 0      | 0.003s     |
+| `TarjanSCCTest`            | 1         | 0        | 0      | 0.002s     |
+| `TopologicalSortTest`      | 1         | 0        | 0      | 0.021s     |
+| `DagPathsTest`             | 2         | 0        | 0      | 0.005s     |
+| **Total**                  | 5         | 0        | 0      | 0.031s     |
+
+
  Summary Table
 |    Dataset | Nodes | Edges | SCC Count |    Topo | Shortest | Longest (Critical Path) | Status |
 | ---------: | ----: | ----: | --------: | ------: | -------: | ----------------------: | ------ |
